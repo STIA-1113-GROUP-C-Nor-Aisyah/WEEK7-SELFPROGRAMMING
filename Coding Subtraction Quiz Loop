@@ -1,0 +1,52 @@
+package selfProgramming;
+
+import java.util.Scanner;
+
+public class SubtractionQuizLoop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 5;
+		int y = 0;
+		int count = 0;
+		long startTime = System.currentTimeMillis();
+		String output = " "; 
+		
+		Scanner sc = new Scanner (System.in);
+		while (count < x) {
+			//Generate two random single-digit integers
+			int number1 = (int) (Math.random() * 10);
+			int number2 = (int) (Math.random() * 10);
+			
+			if (number1 < number2) {
+				int temp = number1;
+				number1 = number2;
+				number2 = temp;
+			}
+			
+			System.out.print("What is " + number1 + " - " + number2 + "?");
+			int answer = sc.nextInt();
+			
+			if(number1 - number2 == answer) {
+				System.out.println("You are correct!");
+				y++;
+		
+			}
+			else
+				System.out.println("Your answer is wrong.\n" + number1 + " - " + number2 + " should be " + (number1 - number2));
+			count++;
+			
+			output += "\n" + number1 + " - " + number2 + " = " + answer + ((number1 - number2 == answer)? " correct": "wrong");
+		}
+		
+		long endTime = System.currentTimeMillis();
+		long testTime = endTime - startTime;
+		
+		System.out.println("Correct count is " + y + "\nTest time is " + testTime / 1000 + " seconds\n" + output);
+		
+		
+		sc.close();
+	}
+
+
+}
