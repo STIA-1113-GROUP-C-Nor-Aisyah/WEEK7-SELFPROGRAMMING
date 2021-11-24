@@ -1,0 +1,25 @@
+package selfProgramming;
+
+import java.util.Scanner;
+
+public class WhileAdditionQuiz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = (int)(Math.random() * 10);   //Generate number 1
+		int y = (int)(Math.random() * 10);   //Generate number 2
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("What is " + x + " + " + y + "?");
+		int answer = sc.nextInt();
+		
+		while(x + y != answer) {
+			System.out.print("Wrong answer. Try again. What is " + x + " + " + y + "?");
+			answer = sc.nextInt();
+		}
+		System.out.print("You got it!");
+	
+		sc.close();
+	}
+
+}
