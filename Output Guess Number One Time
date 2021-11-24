@@ -1,0 +1,22 @@
+Guess a magic number between 0 to 100
+
+Enter your guess: 60
+Your guess is too high
+
+Enter your guess: 50
+Your guess is too low
+
+Enter your guess: 55
+Your guess is too high
+
+Enter your guess: 54
+Your guess is too high
+
+Enter your guess: 53
+Your guess is too high
+
+Enter your guess: 52
+Your guess is too high
+
+Enter your guess: 51
+Yes, the number is 51
